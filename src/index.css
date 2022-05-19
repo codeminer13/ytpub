@@ -5,32 +5,40 @@
   font-family: 'fira Sans', sans-serif;
 }
 
-.App{
-  min-height: 100vh;
+.App {
   position: relative;
+  height:100vh;
   background-color: #313131;
 }
 
+.App1 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:50px;
+  bottom: 0;
+}
+
+
 .camera{
   position: relative;
-  top: 5px;
 }
 
 .player-wrapper {
   position:absolute;
-  width:50%;
-  height: 80%;
+  width: 50%;
+  height: 70vh;
   top:0;
   right:0;
 }
 
 video{
   width: 50%;
-  height: auto;
+  height: 70vh;
 }
 
-button{
-  position:relative;
+.btnrec {
+  position:absolute;
   left: 10px;
   border: none;
   background-image: linear-gradient(to right, #844fff 50%, #ff4f84 50% );
@@ -45,19 +53,35 @@ button{
   margin: 4px 2px;
   cursor: pointer;
   transition: 0.4s;
-  border-radius: 100%;
+  border-radius: 10%;
 }
 
-button:hover{
-  background-position: 100%;
+.btnplay {
+  position:absolute;
+  left: 100px;
+  border: none;
+  background-image: linear-gradient(to right, #844fff 50%, #ff4f84 50% );
+  background-position: 0%;
+  background-size: 200%;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 10%;
 }
+
 
 .overlay {
   z-index: 9;
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size:100px;
+  top:25vh;
+  /* align-items: center; */
+  font-size:200px;
   opacity:.80;
-  /* background: #009938; */
 }

@@ -119,6 +119,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="App1">
       {!show && <div className="camera">
         <video ref={videoRef}></video>
       </div>}
@@ -132,17 +133,16 @@ function App() {
           onPlay={handlePlay}
           onPause={handlePause}
           url={url}
-          //url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
           width='100%'
           height='100%'
         />
       </div>
-      {counter !== 0 && <div className="player-wrapper overlay">{counter}</div>}
-      {/* <p>{status} : {counter}</p> */}
-      {!record && <button onClick={startAfterTime}>Record/Play</button>}
-      {record && <button onClick={stopRecording}>Stop</button>}     
-      {!playPause && record && <button onClick={pauseRecording}>Pause</button>}
-      {playPause && record && <button onClick={resumeRecording}>Play</button>}
+      {counter !== 0 && <div className="App1 overlay">{counter}</div>}
+      {!record && <button className="btnrec" onClick={startAfterTime}>Record/Play</button>}
+      {record && <button className="btnrec" onClick={stopRecording}>Stop</button>}     
+      {!playPause && record && <button  className="btnplay" onClick={pauseRecording}>Pause</button>}
+      {playPause && record && <button className="btnplay" onClick={resumeRecording}>Play</button>}
+      </div>
     </div>
   );
 }
