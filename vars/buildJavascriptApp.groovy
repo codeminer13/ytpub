@@ -10,5 +10,11 @@ def call() {
             sh "npm test"
         }
 
+        stage('Deploy') {
+            if (deploy == true) {
+                sh 'npm publish'
+            }
+        }
+
     }
 }
