@@ -10,10 +10,5 @@ def call() {
             sh "npm test"
         }
 
-        stage("Deploy") {
-            if (config.deploy) {
-                sh "npm publish"
-            }
-        }
     }
 }
