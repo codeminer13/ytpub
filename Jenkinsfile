@@ -1,3 +1,4 @@
 @Library('pipleline-library-demo')_
 
-buildJavascriptApp deploy: true
+sayHello 'Navjot'
+//buildJavascriptApp deploy: true
